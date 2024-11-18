@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sarala:wght@400;700&display=swap');
+
+:root {
+  --bs-primary: #2e483a;
+  --bs-primary-rgb: 46, 72, 58;
+
+
+  --bs-body-bg: #F6F3ED;
+  --bs-body-bg-rgb:var(--bs-body-bg);
+
+  --bs-light: #F6F3ED;
+
+  --bs-text-light: #f6f3ed;
+  --bs-text-light-rgb:var(--bs-light);
+
+  --bs-navbar-brand-color:var(--bs-light)
+
+
+}
+
+.my-btn {
+
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+
+}
+
+
+
+
+
+body {
+  font-family: "Sarala", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+}
+
+#hero {
+  height: 800px;
+  background-color: #E4E6DB;
+  background-image: url(../images/hero-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#hero .d-flex {
+  height: 70vh;
+}
+
+#cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cta-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#cta .d-flex {
+  height: 400px;
+}
+
+section:not(#hero):not(#cta){
+  padding: 60px 0;
+}
+
+@media(min-width: 993px){
+  section:not(#hero):not(#cta){
+    padding: 100px 0;
+  }
+}
+
+/* triggers flip animation when vissitors hover on the card profile pictures */
+#pfp:hover {
+  animation: flip;
+  animation-duration: 2s;
+}
+
+/* triggers hinge fall animation after click  */
+#btnhinge:focus {
+  animation: hinge;
+  animation-duration: 2s;
+}
